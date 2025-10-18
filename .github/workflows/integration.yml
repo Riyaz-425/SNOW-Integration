@@ -1,0 +1,45 @@
+name: Integration Workflow
+
+on: 
+  workflow_dispatch:
+   inputs:
+     application services:
+       description: 'Application Services'
+       type: string
+     load: 
+       description: 'Workload Size'
+       type: string
+     name:
+       description: 'Name'
+       type: string
+     region: 
+       description: 'Region'
+       type: string
+     change id: 
+       description: 'Change ID'
+       type: string  
+     change sys id: 
+       description: 'Change Sys ID'
+       type: string 
+     env:
+       description: 'Environment'
+       type: string
+jobs:
+  manual:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Greetings
+        run: echo "${{ inputs.application services }}"
+      - name: G2
+        run: echo "${{ inputs.load}}"
+      - name: G3
+        run: echo "${{ inputs.name }}"
+      - name: G4
+        run: echo "${{ inputs.region }}"
+      - name: G5
+        run: echo "${{ inputs.change id }}"
+      - name: G6
+        run: echo "${{ inputs.change sys id }}"
+      - name: G7
+        run: echo "${{ inputs.env }}"

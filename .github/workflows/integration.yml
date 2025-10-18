@@ -3,7 +3,7 @@ name: Integration Workflow
 on: 
   workflow_dispatch:
    inputs:
-     application services:
+     application:
        description: 'Application Services'
        type: string
      load: 
@@ -15,10 +15,10 @@ on:
      region: 
        description: 'Region'
        type: string
-     change id: 
+     change: 
        description: 'Change ID'
        type: string  
-     change sys id: 
+     changesys: 
        description: 'Change Sys ID'
        type: string 
      env:
@@ -30,7 +30,7 @@ jobs:
 
     steps:
       - name: Greetings
-        run: echo "${{ inputs.application services }}"
+        run: echo "${{ inputs.application }}"
       - name: G2
         run: echo "${{ inputs.load}}"
       - name: G3
@@ -38,8 +38,8 @@ jobs:
       - name: G4
         run: echo "${{ inputs.region }}"
       - name: G5
-        run: echo "${{ inputs.change id }}"
+        run: echo "${{ inputs.change}}"
       - name: G6
-        run: echo "${{ inputs.change sys id }}"
+        run: echo "${{ inputs.changesys }}"
       - name: G7
         run: echo "${{ inputs.env }}"

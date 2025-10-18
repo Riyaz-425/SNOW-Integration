@@ -29,7 +29,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Output
       - run: echo "${{ inputs.application }}"
       - run: echo "${{ inputs.load}}"
       - run: echo "${{ inputs.name }}"

@@ -29,5 +29,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "${{ inputs.application }}\n${{ inputs.load}}\n${{ inputs.name }}\n${{ inputs.region }}\n${{ inputs.change}}\n${{ inputs.changesys }}\n${{ inputs.env }}"
+      - run: echo "${{ inputs.application }}"
+      - run: echo "${{ inputs.load}}"
+      - run: echo "${{ inputs.name }}"
+      - run: echo "${{ inputs.region }}"
+      - run: echo "${{ inputs.change}}"
+      - run: echo "${{ inputs.changesys }}"
+      - run: echo "${{ inputs.env }}"
       

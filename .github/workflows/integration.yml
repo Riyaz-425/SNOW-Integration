@@ -29,23 +29,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Greetings
-        run: echo "${{ inputs.application }}"
-        
-      - name: G2
-        run: echo "${{ inputs.load}}"
-        
-      - name: G3
-        run: echo "${{ inputs.name }}"
-        
-      - name: G4
-        run: echo "${{ inputs.region }}"
-        
-      - name: G5
-        run: echo "${{ inputs.change}}"
-        
-      - name: G6
-        run: echo "${{ inputs.changesys }}"
-        
-      - name: G7
-        run: echo "${{ inputs.env }}"
+      - name: Output
+      - run: echo "${{ inputs.application }}"
+      - run: echo "${{ inputs.load}}"
+      - run: echo "${{ inputs.name }}"
+      - run: echo "${{ inputs.region }}"
+      - run: echo "${{ inputs.change}}"
+      - run: echo "${{ inputs.changesys }}"
+      - run: echo "${{ inputs.env }}"
